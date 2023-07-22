@@ -1,0 +1,12 @@
+[INFO ] 2023-07-22 16:25:29.875 [main] ShopApplication - Starting ShopApplication using Java 17.0.3.1 with PID 9472 (D:\program\Java\Shop\shop\target\classes started by Andri in D:\program\Java\Shop\shop)
+[DEBUG] 2023-07-22 16:25:29.884 [main] ShopApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+[INFO ] 2023-07-22 16:25:29.885 [main] ShopApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2023-07-22 16:30:00.253 [main] ShopApplication - Starting ShopApplication using Java 17.0.3.1 with PID 9468 (D:\program\Java\Shop\shop\target\classes started by Andri in D:\program\Java\Shop\shop)
+[DEBUG] 2023-07-22 16:30:00.261 [main] ShopApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+[INFO ] 2023-07-22 16:30:00.274 [main] ShopApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2023-07-22 16:36:04.593 [main] ShopApplication - Starting ShopApplication using Java 17.0.3.1 with PID 2160 (D:\program\Java\Shop\shop\target\classes started by Andri in D:\program\Java\Shop\shop)
+[DEBUG] 2023-07-22 16:36:04.600 [main] ShopApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+[INFO ] 2023-07-22 16:36:04.601 [main] ShopApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2023-07-22 16:38:46.171 [main] ShopApplication - Starting ShopApplication using Java 17.0.3.1 with PID 20696 (D:\program\Java\Shop\shop\target\classes started by Andri in D:\program\Java\Shop\shop)
+[DEBUG] 2023-07-22 16:38:46.180 [main] ShopApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+[INFO ] 2023-07-22 16:38:46.181 [main] ShopApplication - No active profile set, falling back to 1 default profile: "default"
