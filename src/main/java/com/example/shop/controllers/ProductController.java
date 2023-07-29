@@ -1,8 +1,8 @@
 package com.example.shop.controllers;
 
 import com.example.shop.errors.ProductNotFoundException;
+import com.example.shop.loger.ToLog;
 import com.example.shop.model.Product;
-import com.example.shop.model.ProductDto;
 import com.example.shop.services.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,8 +26,9 @@ public class ProductController  {
 
     @GetMapping("/v1/product/{id}")
     @ResponseBody
-     public ResponseEntity<ProductDto> getProductById(@PathVariable Long id) throws ProductNotFoundException {
-        ProductDto p = service.findById(id);
+    @ToLog
+     public ResponseEntity<Product> getProductById(@PathVariable Long id) throws ProductNotFoundException {
+        Product p = service.findById(id);
         if(p==null){
             throw new ProductNotFoundException();
         }
@@ -39,17 +40,21 @@ public class ProductController  {
 
     @GetMapping("/v1/product/all")
     @ResponseBody
-    public List<ProductDto> getAllProduct(){
-        return service.findAll();
+    public ResponseEntity<List<Product>> getAllProduct(){
+        List<Product> products = service.findAll();
+        return  ResponseEntity
+                .status(HttpStatus.OK)
+                .body(products);
     }
 
 
-    @PostMapping("/v1/product/{id}")
+    @PostMapping("/v1/product/{product}")// уточнить как передать обект по http в базу и уточнить что использовать для сохранения обьектов POST или не POST
     @ResponseBody
-    public ResponseEntity<Product> saveNewProduct(@PathVariable Product product){
+    @ToLog
+    public ResponseEntity<Product> saveNewProductByDB(@PathVariable Product product){
         service.save(product);
         return ResponseEntity
-                .status(HttpStatus.OK)
+                .status(HttpStatus.ACCEPTED)
                 .body(product);
 
     }
@@ -57,11 +62,12 @@ public class ProductController  {
 
     @DeleteMapping("/v1/product/del/{id}")
     @ResponseBody
-    public  ResponseEntity<String> deleteById(@PathVariable Long id) throws ProductNotFoundException {
+    @ToLog
+    public  ResponseEntity<String> deleteProductById(@PathVariable Long id) throws ProductNotFoundException {
        service.deletById(id);
        String message = "Product delete";
         return  ResponseEntity
-                .status(HttpStatus.OK)
+                .status(HttpStatus.ACCEPTED)
                 .body(message);
     }
 

@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 @Component
-@Scope()
 public class Cart {
 
     private List<Product> productCart;
