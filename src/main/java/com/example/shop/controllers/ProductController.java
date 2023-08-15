@@ -54,7 +54,7 @@ public class ProductController  {
     public ResponseEntity<Product> saveNewProductByDB(@PathVariable Product product){
         service.save(product);
         return ResponseEntity
-                .status(HttpStatus.ACCEPTED)
+                .status(HttpStatus.CREATED)
                 .body(product);
 
     }
@@ -71,9 +71,8 @@ public class ProductController  {
                 .body(message);
     }
 
-    @GetMapping("/v2/product")
+    @GetMapping("/v2/product/all")
     public String findProductById(Model model) {
-
         return "product_page";
     }
 
