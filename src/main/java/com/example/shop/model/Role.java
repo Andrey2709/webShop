@@ -3,14 +3,14 @@ package com.example.shop.model;
 import jakarta.persistence.*;
 
 @Entity
-
+@Table(name ="roles")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Long id;
     @Column
-    private String name;
+    private String title;
 
     public Role() {
     }
@@ -23,11 +23,11 @@ public class Role {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

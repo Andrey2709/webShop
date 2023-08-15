@@ -22,7 +22,7 @@ public class User {
     inverseJoinColumns = @JoinColumn(name = "user_id"))
     private List<Role> roles;
 
-    private  Cart cart;
+
 
     public List<Role> getRoles() {
         return roles;
@@ -32,13 +32,7 @@ public class User {
         this.roles = roles;
     }
 
-    public Cart getCart() {
-        return cart;
-    }
 
-    public void setCart(Cart cart) {
-        this.cart = cart;
-    }
 
     public User() {
     }
